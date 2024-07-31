@@ -1,0 +1,92 @@
+  
+  .paymentFormLabel {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .paymentFormInput {
+    border-radius: 5px;
+  }
+  
+  
+  .payButton:hover {
+    background-color: #3b4ac0;
+    transform: scale(1.05);
+  }
+  
+  
+  .modalTitle {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .modalBody {
+    font-size: 1.25rem;
+  }
+  
+  
+  .modalFooterBtn:hover {
+    background-color: #3b4ac0;
+    transform: scale(1.05);
+  }
+
+  
+
+
+
+
+
+
+  .paymentPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./images/payment3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5px;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .formContainer {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+  }
+  
+  .payButton {
+    margin-top: 20px;
+  }
+  
+  .modalContent {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    position: 'absolute';
+    top: '50%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+  }
+  
+  .modalFooterBtn {
+    margin-top: 20px;
+  }
+  

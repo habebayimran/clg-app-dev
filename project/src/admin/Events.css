@@ -1,0 +1,113 @@
+/* Overall container styling */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #918a8a, #858c92);
+    padding: 40px;
+    color: #413535;
+  }
+  
+  /* Header styling */
+  .events-header {
+    font-size: 36px;
+    color: #0f0f0f;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* List container styling */
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px; /* Space between event cards */
+  }
+  
+  /* Individual event card styling */
+  .event-card {
+    display: flex;
+    flex-direction: row;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for event card */
+  .event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image container styling */
+  .event-image-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-right: 20px;
+  }
+  
+  /* Image styling */
+  .event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for image */
+  .event-image-wrapper:hover .event-image {
+    transform: scale(1.05);
+  }
+  
+  /* Event details container styling */
+  .event-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Event title styling */
+  .event-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Event date and time styling */
+  .event-date-time {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 15px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Event description styling */
+  .event-description {
+    font-size: 16px;
+    color: #555;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Remove unwanted scrollbars */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Only hides horizontal scroll */
+  }
+  
