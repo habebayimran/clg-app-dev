@@ -18,3 +18,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: "88c3e938d4eb90333eec83642caa10d77cef24d2"
+        with:
+          args: >
+            -Dsonar.projectKey="habebayimran_clg-app-dev"
+            -Dsonar.organization="habebayimran"
