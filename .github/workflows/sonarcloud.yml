@@ -20,5 +20,5 @@ jobs:
           SONAR_TOKEN: "88c3e938d4eb90333eec83642caa10d77cef24d2"
         with:
           args: >
-            -Dsonar.projectKey="habebayimran_clg-app-dev"
-            -Dsonar.organization="habebayimran"
+            -Dsonar.projectKey=habebayimran_clg-app-dev
+            -Dsonar.organization=habebayimran
