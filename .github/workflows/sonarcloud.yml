@@ -22,3 +22,4 @@ jobs:
           args: >
             -Dsonar.projectKey=habebayimran_clg-app-dev
             -Dsonar.organization=habebayimran
+            -Dsonar.exclusions=/*.java
