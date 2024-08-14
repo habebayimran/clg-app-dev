@@ -45,6 +45,18 @@ public class CourseController {
         }
     }
 
+    @GetMapping("/{id}/updates")
+    public ResponseEntity<String> getCourseUpdates(@PathVariable Long id) {
+        try {
+            // Fetch course updates based on the course id
+            String updates = courseService.getCourseUpdates(id); // Implement this method in your service
+            return ResponseEntity.ok(updates);
+        } catch (Exception e) {
+            e.printStackTrace(); // Log the exception for debugging
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error fetching updates");
+        }
+    }
+
     @PostMapping
     public ResponseEntity<Course> addCourse(@RequestBody Course course) {
         Course savedCourse = courseService.saveCourse(course);

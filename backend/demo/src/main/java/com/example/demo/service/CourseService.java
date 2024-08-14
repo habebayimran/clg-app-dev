@@ -29,4 +29,15 @@ public class CourseService {
     public void deleteCourse(Long id) {
         courseRepository.deleteById(id);
     }
+    public String getCourseUpdates(Long courseId) {
+        // Implement logic to fetch updates for the course
+        // This can be a simple string or a more complex object based on your needs
+        // For example:
+        Optional<Course> course = courseRepository.findById(courseId);
+        if (course.isPresent()) {
+            return course.get().getUpdates(); // Make sure 'getUpdates' is a valid method
+        } else {
+            throw new RuntimeException("Course not found");
+        }
+    }
 }

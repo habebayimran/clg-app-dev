@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000") // Update with your frontend URL
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/reviews")
 public class ReviewController {
@@ -19,8 +19,14 @@ public class ReviewController {
 
     @PostMapping
     public ResponseEntity<Review> createReview(@RequestBody Review review) {
-        Review createdReview = reviewService.saveReview(review);
-        return new ResponseEntity<>(createdReview, HttpStatus.CREATED);
+        try {
+            Review createdReview = reviewService.saveReview(review);
+            return new ResponseEntity<>(createdReview, HttpStatus.CREATED);
+        } catch (Exception e) {
+            // Log the error for debugging
+            System.err.println("Error saving review: " + e.getMessage());
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @GetMapping

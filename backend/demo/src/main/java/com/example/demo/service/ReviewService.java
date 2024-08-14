@@ -13,7 +13,12 @@ public class ReviewService {
     private ReviewRepository reviewRepository;
 
     public Review saveReview(Review review) {
-        return reviewRepository.save(review);
+        try {
+            return reviewRepository.save(review);
+        } catch (Exception e) {
+            System.err.println("Error saving review: " + e.getMessage());
+            throw e; // Re-throw to be handled by the controller
+        }
     }
 
     public List<Review> getAllReviews() {
@@ -24,4 +29,3 @@ public class ReviewService {
         reviewRepository.deleteById(id);
     }
 }
-
